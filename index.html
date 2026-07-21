@@ -1,3 +1,87 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Chatbot</title><link rel="stylesheet" href="style.css"></head>
-<body><div class="container"><aside class="sidebar"><h2>🤖 AI Chatbot</h2><select id="model"><option>Llama 3.3 70B</option><option>Llama 3.1 8B</option><option>Gemma2</option></select><button onclick="clearChat()">Clear Chat</button></aside><main class="chat-container"><div id="chat"></div><div class="input-area"><input id="prompt" placeholder="Ask anything..."><button onclick="send()">Send</button></div></main></div><script src="script.js"></script></body></html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Chatbot</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="login">
+
+<div class="card">
+
+<h1>🤖 AI Chatbot</h1>
+
+<p>Welcome!</p>
+
+<input id="name" placeholder="Your Name">
+
+<input id="emoji" maxlength="2" placeholder="Emoji (😎)">
+
+<input id="apikey" type="password" placeholder="Groq API Key">
+
+<select id="model">
+
+<option value="llama-3.3-70b-versatile">Llama 3.3 70B</option>
+
+<option value="llama-3.1-8b-instant">Llama 3.1 8B</option>
+
+<option value="gemma2-9b-it">Gemma 2 9B</option>
+
+</select>
+
+<button id="start">Start Chatting</button>
+
+</div>
+
+</div>
+
+<div id="app">
+
+<div class="sidebar">
+
+<div class="profile">
+
+<div id="pfp">🙂</div>
+
+<h2 id="username"></h2>
+
+</div>
+
+<button id="clear">Clear Chat</button>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+
+<h2>🤖 AI Assistant</h2>
+
+</div>
+
+<div id="messages"></div>
+
+<div class="bottom">
+
+<input id="prompt" placeholder="Type your message...">
+
+<button id="send">➤</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
