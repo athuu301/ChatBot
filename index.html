@@ -1,87 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI Chatbot</title>
+    <title>RizzAI</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div id="login">
+    <!-- LOGIN SCREEN -->
 
-<div class="card">
+    <div id="loginScreen">
 
-<h1>🤖 AI Chatbot</h1>
+        <div class="loginCard">
 
-<p>Welcome!</p>
+            <div class="logo">
+                ❤️
+            </div>
 
-<input id="name" placeholder="Your Name">
+            <h1>RizzAI</h1>
 
-<input id="emoji" maxlength="2" placeholder="Emoji (😎)">
+            <p>Your personal AI wingman.</p>
 
-<input id="apikey" type="password" placeholder="Groq API Key">
+            <input
+                id="name"
+                type="text"
+                placeholder="Your Name"
+            >
 
-<select id="model">
+            <input
+                id="apikey"
+                type="password"
+                placeholder="Groq API Key"
+            >
 
-<option value="llama-3.3-70b-versatile">Llama 3.3 70B</option>
+            <select id="model">
 
-<option value="llama-3.1-8b-instant">Llama 3.1 8B</option>
+                <option value="llama-3.3-70b-versatile">
+                    Llama 3.3 70B
+                </option>
 
-<option value="gemma2-9b-it">Gemma 2 9B</option>
+                <option value="llama-3.1-8b-instant">
+                    Llama 3.1 8B
+                </option>
 
-</select>
+                <option value="gemma2-9b-it">
+                    Gemma 2 9B
+                </option>
 
-<button id="start">Start Chatting</button>
+            </select>
 
-</div>
+            <button id="startBtn">
+                Start Chatting →
+            </button>
 
-</div>
+            <small>
 
-<div id="app">
+                Your API key stays in your browser and is never stored.
 
-<div class="sidebar">
+            </small>
 
-<div class="profile">
+        </div>
 
-<div id="pfp">🙂</div>
+    </div>
 
-<h2 id="username"></h2>
 
-</div>
 
-<button id="clear">Clear Chat</button>
+    <!-- CHAT APP -->
 
-</div>
+    <div id="app">
 
-<div class="main">
+        <!-- SIDEBAR -->
 
-<div class="header">
+        <aside class="sidebar">
 
-<h2>🤖 AI Assistant</h2>
+            <div>
 
-</div>
+                <div class="profile">
 
-<div id="messages"></div>
+                    <div class="avatar">
 
-<div class="bottom">
+                        ❤️
 
-<input id="prompt" placeholder="Type your message...">
+                    </div>
 
-<button id="send">➤</button>
+                    <h2 id="username">
 
-</div>
+                    </h2>
 
-</div>
+                    <p>Using RizzAI</p>
 
-</div>
+                </div>
 
-<script src="script.js"></script>
+                <div class="menu">
+
+                    <button id="clearChat">
+
+                        🗑️ Clear Chat
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="footer">
+
+                Made with ❤️
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- MAIN -->
+
+        <main class="chatArea">
+
+            <header>
+
+                <div>
+
+                    <h2>
+
+                        ❤️ RizzAI
+
+                    </h2>
+
+                    <p>
+
+                        Smooth replies. Better conversations.
+
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <div id="messages">
+
+            </div>
+
+
+
+            <div class="inputArea">
+
+                <input
+
+                    id="prompt"
+
+                    placeholder="Ask for pickup lines, replies, texting advice..."
+
+                    autocomplete="off"
+
+                >
+
+                <button id="send">
+
+                    ➜
+
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
