@@ -1,187 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RizzAI</title>
+<title>AI Chatbot</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <!-- LOGIN SCREEN -->
+<div id="login">
 
-    <div id="loginScreen">
+<div class="card">
 
-        <div class="loginCard">
+<h1>🤖 AI Chatbot</h1>
 
-            <div class="logo">
-                ❤️
-            </div>
+<p>Welcome!</p>
 
-            <h1>RizzAI</h1>
+<input id="name" placeholder="Your Name">
 
-            <p>Your personal AI wingman.</p>
+<input id="emoji" maxlength="2" placeholder="Emoji (😎)">
 
-            <input
-                id="name"
-                type="text"
-                placeholder="Your Name"
-            >
+<input id="apikey" type="password" placeholder="Groq API Key">
 
-            <input
-                id="apikey"
-                type="password"
-                placeholder="Groq API Key"
-            >
+<select id="model">
 
-            <select id="model">
+<option value="llama-3.3-70b-versatile">Llama 3.3 70B</option>
 
-                <option value="llama-3.3-70b-versatile">
-                    Llama 3.3 70B
-                </option>
+<option value="llama-3.1-8b-instant">Llama 3.1 8B</option>
 
-                <option value="llama-3.1-8b-instant">
-                    Llama 3.1 8B
-                </option>
+<option value="gemma2-9b-it">Gemma 2 9B</option>
 
-                <option value="gemma2-9b-it">
-                    Gemma 2 9B
-                </option>
+</select>
 
-            </select>
+<button id="start">Start Chatting</button>
 
-            <button id="startBtn">
-                Start Chatting →
-            </button>
+</div>
 
-            <small>
+</div>
 
-                Your API key stays in your browser and is never stored.
+<div id="app">
 
-            </small>
+<div class="sidebar">
 
-        </div>
+<div class="profile">
 
-    </div>
+<div id="pfp">🙂</div>
 
+<h2 id="username"></h2>
 
+</div>
 
-    <!-- CHAT APP -->
+<button id="clear">Clear Chat</button>
 
-    <div id="app">
+</div>
 
-        <!-- SIDEBAR -->
+<div class="main">
 
-        <aside class="sidebar">
+<div class="header">
 
-            <div>
+<h2>🤖 AI Assistant</h2>
 
-                <div class="profile">
+</div>
 
-                    <div class="avatar">
+<div id="messages"></div>
 
-                        ❤️
+<div class="bottom">
 
-                    </div>
+<input id="prompt" placeholder="Type your message...">
 
-                    <h2 id="username">
+<button id="send">➤</button>
 
-                    </h2>
+</div>
 
-                    <p>Using RizzAI</p>
+</div>
 
-                </div>
+</div>
 
-                <div class="menu">
-
-                    <button id="clearChat">
-
-                        🗑️ Clear Chat
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <div class="footer">
-
-                Made with ❤️
-
-            </div>
-
-        </aside>
-
-
-
-        <!-- MAIN -->
-
-        <main class="chatArea">
-
-            <header>
-
-                <div>
-
-                    <h2>
-
-                        ❤️ RizzAI
-
-                    </h2>
-
-                    <p>
-
-                        Smooth replies. Better conversations.
-
-                    </p>
-
-                </div>
-
-            </header>
-
-
-
-            <div id="messages">
-
-            </div>
-
-
-
-            <div class="inputArea">
-
-                <input
-
-                    id="prompt"
-
-                    placeholder="Ask for pickup lines, replies, texting advice..."
-
-                    autocomplete="off"
-
-                >
-
-                <button id="send">
-
-                    ➜
-
-                </button>
-
-            </div>
-
-        </main>
-
-    </div>
-
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
